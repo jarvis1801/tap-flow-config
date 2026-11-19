@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Privacy Policy — TapFlow</title>
+  <style>
+    :root {
+      --bg: #f8f9fb;
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --accent: #00668b;
+      --accent-soft: #e0f2fe;
+      --accent-text: #004c69;
+      --border: #e5e7eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1419;
+        --surface: #171d24;
+        --surface-alt: #1f2730;
+        --text: #f3f4f6;
+        --text-muted: #9ca3af;
+        --accent: #67d3ff;
+        --accent-soft: #0c3347;
+        --accent-text: #bae6fd;
+        --border: #2a333d;
+      }
+    }
+
+    :root[data-theme="light"] {
+      --bg: #f8f9fb;
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --accent: #00668b;
+      --accent-soft: #e0f2fe;
+      --accent-text: #004c69;
+      --border: #e5e7eb;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0f1419;
+      --surface: #171d24;
+      --surface-alt: #1f2730;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #67d3ff;
+      --accent-soft: #0c3347;
+      --accent-text: #bae6fd;
+      --border: #2a333d;
+    }
+
+    :root[data-theme="amoled"] {
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --surface-alt: #141414;
+      --text: #ffffff;
+      --text-muted: #a1a1aa;
+      --accent: #67d3ff;
+      --accent-soft: #082838;
+      --accent-text: #bae6fd;
+      --border: #262626;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px 56px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent-text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .summary-box {
+      background-color: var(--surface-alt);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    section {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 6px 0 10px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background-color: var(--surface-alt);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      margin-top: 28px;
+    }
+  </style>
+  <script>
+    (function () {
+      var theme = new URLSearchParams(window.location.search).get("theme");
+      if (theme === "light" || theme === "dark" || theme === "amoled") {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span class="badge">TapFlow Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="meta"><strong>Effective Date:</strong> November 19, 2026 &bull; <strong>App:</strong> TapFlow (<code>com.jarvis.tapflow</code>)</p>
+      <div class="summary-box">
+        <strong>Privacy at a Glance:</strong> TapFlow requires <strong>no user account</strong>, contains <strong>no ads or behavioral tracking</strong>, and executes all automation, color/image matching, and script storage <strong>100% locally on your device</strong>. Network access is used strictly for Google Play Billing and optional promo-code verification via Firebase Remote Config.
+      </div>
+    </header>
+
+    <section>
+      <h2>1. Information Stored Locally on Your Device</h2>
+      <p>TapFlow operates on an offline-first architecture. All automation data you create or capture remains inside your device's private application storage unless you explicitly export it:</p>
+      <ul>
+        <li><strong>Scripts, Pipelines &amp; Variables:</strong> Automation sequences, timing settings, and variable definitions stored in a local Room/SQLite database.</li>
+        <li><strong>Inspect Screenshots &amp; Pixel Targets:</strong> Lossless PNG screenshots, sampled pixel coordinates/colors, and crop region bounds captured when you intentionally use Live Recording, Live Inspect, or Screenshot Import.</li>
+        <li><strong>Execution Logs &amp; Failure Snapshots:</strong> Local execution history and optional failure screenshots stored temporarily on-device (automatically pruned to recent sessions / 7 days).</li>
+        <li><strong>App Preferences &amp; Entitlement Anchors:</strong> UI settings (theme, language, overlay size), local 7-day trial timestamps, and redeemed promo window timestamps protected using Android Keystore cryptographic HMAC verification to prevent tampering.</li>
+        <li><strong>Manual <code>.tapflow</code> Backups:</strong> When you export a <code>.tapflow</code> backup file via Android's system file picker, only script/pipeline configurations are exported (screenshots and Inspect assets are strictly excluded).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Sensitive Android Permissions &amp; How They Are Used</h2>
+      <p>TapFlow only requests system permissions essential to user-initiated automation features:</p>
+
+      <h3>AccessibilityService API</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Used exclusively to dispatch user-configured touch gestures (tap, double tap, long press, multi-touch, swipe), trigger system navigation actions (Home, Back, Recents, etc.), insert text into focused fields you configure, detect the active foreground app package name for <em>App Match</em> rules and Inspect metadata, and optionally intercept hardware Volume Down presses if you enable Emergency Stop.</li>
+        <li><strong>Strict Non-Collection Guarantee:</strong> TapFlow <strong>never</strong> uses the AccessibilityService API to collect, harvest, log remotely, sell, or transmit screen contents, keystrokes, passwords, messages, or personal information.</li>
+      </ul>
+
+      <h3>Screen Capture (<code>MediaProjection</code>)</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Used only when you run scripts containing Color Match or Image Match conditions, or when you actively start Live Recording or Live Inspect. Frames are analyzed in memory on-device (or saved locally in private storage for Inspect/failure logs) and are <strong>never uploaded or streamed to external servers</strong>.</li>
+      </ul>
+
+      <h3>Display Over Other Apps (<code>SYSTEM_ALERT_WINDOW</code>)</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Displays the floating control dock, coordinate picker, and optional visual touch debug marker over other apps while you operate or test scripts.</li>
+      </ul>
+
+      <h3>Installed Applications Visibility</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Queries launchable apps locally on your device solely so you can pick target apps inside <em>Launch App</em>, <em>Force Stop App</em>, and <em>App Match</em> actions, and display app icons/names on Inspect items. Your installed app list is never sent off your device.</li>
+      </ul>
+
+      <h3>Optional System Integrations (Shizuku, MacroDroid &amp; Tasker)</h3>
+      <ul>
+        <li>If you choose to grant permission via Shizuku or send local Android broadcasts from MacroDroid or Tasker, commands execute locally on-device. TapFlow does not transmit data to third-party automation apps outside the local broadcast status extras you trigger.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Network Requests &amp; Third-Party Services</h2>
+      <p>While TapFlow's core automation runs completely offline, limited network communication occurs strictly for licensing and optional promo verification:</p>
+      <ul>
+        <li><strong>Google Play Billing:</strong> In-app purchases and purchase restoration are processed directly by Google Play. TapFlow receives only purchase tokens/entitlement status and never accesses or stores your credit card or banking details. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+        <li><strong>Firebase Remote Config (Optional Promo Codes):</strong> When you manually submit a promo/redeem code on the upgrade screen (or during periodic config refresh), TapFlow connects to Firebase Remote Config to verify code validity and date windows. Firebase Installations uses an ephemeral app-instance identifier solely to deliver Remote Config parameters. TapFlow does <strong>not</strong> use Google Analytics for Firebase for ad personalization or user profiling. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy &amp; Security</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Data Control, Retention &amp; Deletion</h2>
+      <ul>
+        <li>You have full control over your local data: you can delete individual scripts, pipelines, Inspect groups, or execution logs, or clear all cached Inspect images inside Settings.</li>
+        <li>Execution logs and associated crash screenshots are automatically pruned under TapFlow's local retention policy (maximum 50 sessions or 7 days).</li>
+        <li>Uninstalling TapFlow permanently removes all private local databases, preferences, and saved screenshots from your device (excluding any <code>.tapflow</code> backup files you manually saved elsewhere).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Children's Privacy</h2>
+      <p>TapFlow is a general utility application and is not directed at children under the age of 13 (or the minimum legal age in your jurisdiction). Because we do not collect personal accounts or analytics, we do not knowingly collect personal data from children.</p>
+    </section>
+
+    <section>
+      <h2>6. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect new features or legal requirements. Any updates will be published on this page with a revised Effective Date.</p>
+    </section>
+
+    <section>
+      <h2>7. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or TapFlow's permissions, please contact us at:<br />
+      <strong>Email:</strong> <a href="mailto:ccplayconsole@gmail.com">ccplayconsole@gmail.com</a></p>
+    </section>
+
+    <footer>
+      Copyright &copy; 2026 TapFlow. All Rights Reserved.
+    </footer>
+  </main>
+</body>
+</html>

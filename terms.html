@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Terms &amp; Conditions — TapFlow</title>
+  <style>
+    :root {
+      --bg: #f8f9fb;
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --accent: #00668b;
+      --accent-soft: #e0f2fe;
+      --accent-text: #004c69;
+      --warn-bg: #fef3c7;
+      --warn-border: #d97706;
+      --warn-text: #78350f;
+      --border: #e5e7eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1419;
+        --surface: #171d24;
+        --surface-alt: #1f2730;
+        --text: #f3f4f6;
+        --text-muted: #9ca3af;
+        --accent: #67d3ff;
+        --accent-soft: #0c3347;
+        --accent-text: #bae6fd;
+        --warn-bg: #2e200a;
+        --warn-border: #f59e0b;
+        --warn-text: #fde68a;
+        --border: #2a333d;
+      }
+    }
+
+    :root[data-theme="light"] {
+      --bg: #f8f9fb;
+      --surface: #ffffff;
+      --surface-alt: #eef2f6;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --accent: #00668b;
+      --accent-soft: #e0f2fe;
+      --accent-text: #004c69;
+      --warn-bg: #fef3c7;
+      --warn-border: #d97706;
+      --warn-text: #78350f;
+      --border: #e5e7eb;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0f1419;
+      --surface: #171d24;
+      --surface-alt: #1f2730;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #67d3ff;
+      --accent-soft: #0c3347;
+      --accent-text: #bae6fd;
+      --warn-bg: #2e200a;
+      --warn-border: #f59e0b;
+      --warn-text: #fde68a;
+      --border: #2a333d;
+    }
+
+    :root[data-theme="amoled"] {
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --surface-alt: #141414;
+      --text: #ffffff;
+      --text-muted: #a1a1aa;
+      --accent: #67d3ff;
+      --accent-soft: #082838;
+      --accent-text: #bae6fd;
+      --warn-bg: #241805;
+      --warn-border: #f59e0b;
+      --warn-text: #fde68a;
+      --border: #262626;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px 56px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent-text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .notice-box {
+      background-color: var(--warn-bg);
+      color: var(--warn-text);
+      border-left: 4px solid var(--warn-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 16px;
+      font-size: 0.94rem;
+    }
+
+    section {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 6px 0 10px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background-color: var(--surface-alt);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      margin-top: 28px;
+    }
+  </style>
+  <script>
+    (function () {
+      var theme = new URLSearchParams(window.location.search).get("theme");
+      if (theme === "light" || theme === "dark" || theme === "amoled") {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span class="badge">TapFlow Legal</span>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="meta"><strong>Effective Date:</strong> November 19, 2026 &bull; <strong>App:</strong> TapFlow (<code>com.jarvis.tapflow</code>)</p>
+      <div class="notice-box">
+        <strong>Important Notice:</strong> By downloading, installing, or using TapFlow, you agree to these Terms &amp; Conditions. Please review every automation script before running it and ensure your usage complies with the terms of any third-party apps you interact with.
+      </div>
+    </header>
+
+    <section>
+      <h2>1. Proprietary Software License</h2>
+      <p>TapFlow is commercial, closed-source software. Subject to your compliance with these Terms, we grant you a personal, non-exclusive, non-transferable, revocable license to install and use TapFlow on Android devices that you own or control.</p>
+      <ul>
+        <li>You may <strong>not</strong> reverse engineer, decompile, disassemble, modify, repackage, rent, sublicense, or redistribute TapFlow or bypass its licensing and entitlement mechanisms.</li>
+        <li>All copyrights, trademarks, UI designs, and source code remain the exclusive property of TapFlow.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Acceptable Use &amp; User Responsibility</h2>
+      <p>TapFlow is an automation, accessibility, and repetitive-workflow testing utility. All actions performed by TapFlow are configured and initiated strictly by you.</p>
+      <ul>
+        <li><strong>Third-Party Terms Compliance:</strong> You are solely responsible for ensuring that your use of TapFlow complies with all applicable laws and the Terms of Service of any third-party applications, games, or websites you automate. TapFlow is not responsible for account restrictions, suspensions, bans, or data loss imposed by third parties.</li>
+        <li><strong>No Unlawful Use:</strong> You agree not to use TapFlow for unauthorized access, spam, fraud, denial-of-service behavior, or violating any local, national, or international laws.</li>
+        <li><strong>Physical &amp; Device Safety:</strong> Automated scripts simulate real touch and system inputs on your device. You are responsible for configuring appropriate delays, loop safety limits, and safety controls (such as <em>Pause on Screen Off</em> and <em>Emergency Stop</em>) to avoid unintended taps or device interactions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Optional Third-Party Integrations</h2>
+      <p>TapFlow offers optional interoperability with independent third-party tools such as <strong>Shizuku</strong>, <strong>MacroDroid</strong>, and <strong>Tasker</strong>.</p>
+      <ul>
+        <li>These third-party apps are neither owned by nor affiliated with TapFlow and are governed by their own terms and privacy policies.</li>
+        <li>TapFlow does not guarantee compatibility with every Android OEM customization, OS update, or third-party app change.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Free Tier, 7-Day Trial, Promo Codes &amp; Lifetime Pro</h2>
+      <ul>
+        <li><strong>Free Tier:</strong> Includes unlimited scripts, pipelines, script actions, flow diagrams, and single-point color matching at no cost.</li>
+        <li><strong>7-Day Free Trial:</strong> TapFlow provides an optional one-time 7-day local trial per device installation (requiring no credit card) unlocking Pro features such as advanced image matching, Shizuku integration, MacroDroid/Tasker triggers, full execution logs, and the AMOLED True Black theme. Data backup/transfer (<code>.tapflow</code>) requires a Lifetime Pro purchase and is excluded from the trial.</li>
+        <li><strong>Promotional Offer &amp; Redeem Codes:</strong> Eligible trial users and users who redeem a valid promotional code within its active date window receive temporary access to a discounted Google Play one-time offer SKU for 7 days. Promotional windows and trials are protected against system clock manipulation; tampering with device clocks invalidates the active trial or promo window.</li>
+        <li><strong>One-Time Lifetime Purchase:</strong> Lifetime Pro is a non-consumable one-time in-app purchase processed exclusively through Google Play Billing. Purchases are tied to your Google Play account and can be restored on compatible Android devices via <em>Restore Google Play Purchase</em>.</li>
+        <li><strong>Refunds:</strong> All billing, taxes, and refund requests are handled in accordance with <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener noreferrer">Google Play's Refund Policies</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Disclaimer of Warranties</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TAPFLOW IS PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT AUTOMATION SCRIPTS WILL ALWAYS RUN UNINTERRUPTED OR ERROR-FREE ACROSS ALL ANDROID DEVICES OR THIRD-PARTY APPS.</p>
+    </section>
+
+    <section>
+      <h2>6. Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL TAPFLOW OR ITS DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, IN-APP ITEMS, ACCOUNTS, PROFITS, OR REVENUE ARISING OUT OF OR RELATED TO YOUR USE OF TAPFLOW, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE AMOUNT YOU ACTUALLY PAID FOR TAPFLOW PRO IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+    </section>
+
+    <section>
+      <h2>7. Changes &amp; Governing Law</h2>
+      <p>We may update these Terms from time to time. Continued use of TapFlow after updated Terms become effective constitutes your acceptance of the revised Terms. These Terms are governed by the laws of <strong>[Your Jurisdiction / Hong Kong SAR]</strong>, without regard to conflict-of-law principles.</p>
+    </section>
+
+    <section>
+      <h2>8. Contact</h2>
+      <p>For licensing, billing, or legal inquiries, please contact:<br />
+      <strong>Email:</strong> <a href="mailto:ccplayconsole@gmail.com">ccplayconsole@gmail.com</a></p>
+    </section>
+
+    <footer>
+      Copyright &copy; 2026 TapFlow. All Rights Reserved.
+    </footer>
+  </main>
+</body>
+</html>
